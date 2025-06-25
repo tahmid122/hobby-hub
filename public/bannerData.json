@@ -1,0 +1,26 @@
+[
+  {
+    "id": 1,
+    "img": "https://i.ibb.co/p6rcxXdg/image-12.jpg",
+    "title": "Welcome to HobbyHub",
+    "description": "Discover local groups based on your favorite hobbies. Start your journey today!"
+  },
+  {
+    "id": 2,
+    "img": "https://i.ibb.co/LhbfTnJK/image-13.jpg",
+    "title": "Explore Nearby Communities",
+    "description": "Find like-minded people in your area. Book clubs, hiking crews, art circles, and more"
+  },
+  {
+    "id": 3,
+    "img": "https://i.ibb.co/jkPGLjkV/image-14.jpg",
+    "title": "Can’t find your hobby group?",
+    "description": "Create your own and invite others to join. It’s quick, simple, and free!"
+  },
+  {
+    "id": 4,
+    "img": "https://i.ibb.co/cqCjBM6/image-15.jpg",
+    "title": "Build Real Friendships",
+    "description": "Hobbies bring people together. Make meaningful connections through shared passions"
+  }
+]

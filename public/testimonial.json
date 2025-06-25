@@ -1,0 +1,20 @@
+[
+  {
+    "id": 1,
+    "name": "Alex- New York",
+    "description": "My painting group started with just 3 members. Now we have 50+ weekly attendees!",
+    "image": "https://i.ibb.co/DfhR2kMf/photo-1714328564923-d4826427c991.jpg"
+  },
+  {
+    "id": 2,
+    "name": "Sara- Los Angeles",
+    "description": "I joined a local hiking group through HobbyHub and found not just trails, but lifelong friends!",
+    "image": "https://i.ibb.co/NdNyMmnh/photo-1742402281952-432c2416d7fe.jpg"
+  },
+  {
+    "id": 3,
+    "name": "Labia- Maryland",
+    "description": "Starting a book club through HobbyHub was the best decision I made this year.",
+    "image": "https://i.ibb.co/j9ZQ5Ndd/photo-1639804817923-005fb4c1e99f.jpg"
+  }
+]

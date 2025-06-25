@@ -1,0 +1,32 @@
+[
+  {
+    "id": 1,
+    "icon": "📚",
+    "title": "Book Clubs"
+  },
+  {
+    "id": 2,
+    "icon": "🚵‍♀️",
+    "title": "Hiking Groups"
+  },
+  {
+    "id": 3,
+    "icon": "🎨",
+    "title": "Art & Painting Circles"
+  },
+  {
+    "id": 4,
+    "icon": "🎮",
+    "title": "Gaming"
+  },
+  {
+    "id": 5,
+    "icon": "📷",
+    "title": "Photography"
+  },
+  {
+    "id": 6,
+    "icon": "🧘",
+    "title": "Yoga & Wellness"
+  }
+]
