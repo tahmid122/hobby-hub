@@ -6,14 +6,14 @@ const GroupCard = ({ group }) => {
   return (
     <div
       key={group?._id}
-      className="flex md:flex-row flex-col md:items-center  gap-6  rounded pr-2 dark:shadow-sm dark:shadow-slate-300 dark:text-white dark:p-2"
+      className="flex flex-col md:items-center  gap-6  rounded pr-2 dark:shadow-sm dark:shadow-slate-300 dark:text-white dark:p-2"
     >
       <img
-        className="h-[250px] w-full md:h-[210px] md:w-[45%] object-cover  rounded-lg bg-black"
+        className="h-[250px] w-full md:h-[210px] object-cover  rounded-lg bg-black"
         src={group?.imageUrl}
         alt=""
       />
-      <div className="md:w-[55%] w-full">
+      <div className="w-full">
         <div className="space-y-2">
           <small className="font-bold text-base text-slate-600 dark:text-slate-300 block">
             {group?.location.slice(0, 20)}

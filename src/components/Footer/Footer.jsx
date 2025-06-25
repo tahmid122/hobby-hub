@@ -7,14 +7,24 @@ import {
   FaX,
 } from "react-icons/fa6";
 import { Link } from "react-router";
+import logo from "/logo1.png";
 
 const Footer = () => {
   return (
-    <div className="bg-slate-800 w-full pt-10 pb-10 ">
+    <div className="bg-slate-800 w-full pt-10 pb-2 ">
       <div className="w-full md:w-11/12 mx-auto">
         <footer className="footer sm:footer-horizontal  text-white p-5 md:p-2">
-          <nav>
-            <h6 className="text-2xl font-bold">HobbyHub</h6>
+          <nav className="space-y-3">
+            <Link to={"/"} className="flex items-center gap-2">
+              <span className="text-5xl">
+                <img className="w-14" src={logo} alt="" />
+              </span>
+              <span className="text-3xl font-semibold text-white">
+                HobbyHub
+              </span>
+              {/* <img className="h-12 w-full" src={smileLogo} alt="" /> */}
+            </Link>
+
             <p className="text-sm text-gray-300">
               Join a group or start your own. <br />
               Hobbies aren’t just for fun — they connect us. <br />
@@ -77,12 +87,8 @@ const Footer = () => {
               </a>
             </div>
           </nav>
-          <nav className="hidden lg:block text-center rotate-90 mt-10 text-sm  -mr-40">
-            HobbyHub,
-            <br /> All rights reserved. &copy;2025
-          </nav>
         </footer>
-        <p className="text-white block lg:hidden text-center text-sm">
+        <p className="text-white block text-center text-sm">
           HobbyHub, All rights reserved &copy; 2025
         </p>
       </div>
