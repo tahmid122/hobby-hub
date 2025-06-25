@@ -32,14 +32,28 @@ const NavBar = () => {
           All Groups
         </NavLink>
       </li>
+      {user?.email && (
+        <li>
+          <NavLink className={"rounded-none"} to={"/createGroup"}>
+            Create Group
+          </NavLink>
+        </li>
+      )}
+      {user?.email && (
+        <li>
+          <NavLink className={"rounded-none"} to={"/myGroups"}>
+            My Groups
+          </NavLink>
+        </li>
+      )}
       <li>
-        <NavLink className={"rounded-none"} to={"/createGroup"}>
-          Create Group
+        <NavLink className={"rounded-none"} to={"/about"}>
+          About Us
         </NavLink>
       </li>
       <li>
-        <NavLink className={"rounded-none"} to={"/myGroups"}>
-          My Groups
+        <NavLink className={"rounded-none"} to={"/contact"}>
+          Contact
         </NavLink>
       </li>
     </>
@@ -78,7 +92,7 @@ const NavBar = () => {
             <span className="text-5xl">
               <img className="w-14" src={logo} alt="" />
             </span>
-            <span className="text-3xl font-semibold text-secondary">
+            <span className="text-3xl font-semibold text-secondary dark:text-white">
               HobbyHub
             </span>
             {/* <img className="h-12 w-full" src={smileLogo} alt="" /> */}

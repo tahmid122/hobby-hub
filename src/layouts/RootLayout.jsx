@@ -15,7 +15,7 @@ const RootLayout = () => {
     <>
       {navigation.state === "loading" && <LoadingSpinner />}
       <div className="dark:bg-slate-900 relative">
-        <div className="fixed flex flex-col mt-2 top-16 left-0 z-10 bg-gray-50">
+        <div className="fixed flex flex-col mt-4 top-16 left-0 z-10 bg-gray-50">
           <button
             onClick={() => {
               ThemeChanger("light");

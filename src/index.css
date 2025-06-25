@@ -4,6 +4,12 @@
 @import "tailwindcss";
 @custom-variant dark (&:where(.dark, .dark *));
 @plugin "daisyui";
+@plugin "daisyui/theme" {
+  name: "light";
+  default: true;
+  --color-primary: blue;
+  --color-secondary: #392467;
+}
 
 * {
   font-family: "Poppins", sans-serif;

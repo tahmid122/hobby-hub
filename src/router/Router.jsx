@@ -11,6 +11,8 @@ import UpdateGroup from "../pages/UpdateGroup/UpdateGroup";
 import GroupDetails from "../pages/GroupDetails/GroupDetails";
 import ProtectedRoute from "./ProtectedRoute";
 import LoadingSpinner from "../components/LoadingSpinner/LoadingSpinner";
+import About from "../pages/About/About";
+import Contact from "../pages/Contact/Contact";
 
 export const router = createBrowserRouter([
   {
@@ -30,6 +32,14 @@ export const router = createBrowserRouter([
       {
         path: "register",
         Component: Register,
+      },
+      {
+        path: "about",
+        Component: About,
+      },
+      {
+        path: "contact",
+        Component: Contact,
       },
       {
         path: "groups",
