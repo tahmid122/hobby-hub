@@ -5,6 +5,7 @@ import Groups from "../../components/Groups/Groups";
 import Categories from "../../components/Categories/Categories";
 import LoadingSpinner from "../../components/LoadingSpinner/LoadingSpinner";
 import Testimonial from "../../components/Testimonial/Testimonial";
+import Approach from "../../components/Approach/Approach";
 const categoriesPromise = fetch("/categories.json").then((res) => res.json());
 const testimonialPromise = fetch("/testimonial.json").then((res) => res.json());
 
@@ -21,6 +22,7 @@ const Home = () => {
       <Suspense fallback={<LoadingSpinner />}>
         <Testimonial testimonialPromise={testimonialPromise} />
       </Suspense>
+      <Approach />
     </div>
   );
 };
