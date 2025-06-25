@@ -1,40 +1,43 @@
 import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation, Autoplay } from "swiper/modules";
+import { Autoplay } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
+
 const Banner = ({ bannerData }) => {
   return (
-    <div className="min-h-[calc(100vh-100px)] flex dark:text-white">
+    <div className="min-h-[70vh]">
       <Swiper
-        navigation={true}
-        modules={[Navigation, Autoplay]}
+        modules={[Autoplay]}
         autoplay={{
           delay: 5000,
           disableOnInteraction: false,
         }}
-        className="mySwiper h-[calc(100vh-100px)]"
+        className="mySwiper h-[70vh]"
       >
         {bannerData?.map((banner) => (
           <SwiperSlide key={banner.id}>
-            {/* <div className="flex flex-col lg:flex-row items-center  justify-center lg:justify-around gap-6 w-full md:w-10/12 mx-auto h-full p-0"> */}
-            <div className="md:gap-6 w-full md:w-10/12 mx-auto h-full p-0 grid grid-cols-1 lg:grid-cols-12 place-items-center">
-              <div className="w-full lg:w-auto p-2 col-span-6">
+            <div className="grid grid-cols-1 lg:grid-cols-2 items-center max-w-7xl mx-auto px-4 h-full gap-8 py-8">
+              {/* Image Section */}
+              <div className="flex justify-center">
                 <img
-                  className=" rounded-xl lg:rounded-2xl h-[250px]  sm:h-[450px] object-cover lg:object-contain w-full  lg:w-[500px] drop-shadow-lg drop-shadow-[#392467] md:drop-shadow-xl md:drop-shadow-[#392467] lg:hover:skew-6 lg:hover:-rotate-x-6 transition-all duration-500"
                   src={banner.img}
-                  alt=""
+                  alt={banner.title}
+                  className="rounded-xl max-h-[300px] md:max-h-[400px] object-cover w-full lg:w-[500px] shadow-xl transition-transform duration-500 hover:scale-105"
                 />
               </div>
-              <div className="border-l-8 border-[#392467] col-span-6">
-                <div className="ml-5 space-y-3">
-                  <h2 className="text-3xl lg:text-4xl font-bold">
-                    {banner.title}
-                  </h2>
-                  <p className="text-lg font-light dark:text-white">
-                    {banner.description}
-                  </p>
-                </div>
+
+              {/* Text Section */}
+              <div className="space-y-5 text-center lg:text-left">
+                <h2 className="text-3xl lg:text-5xl font-bold text-[#392467] dark:text-white">
+                  {banner.title}
+                </h2>
+                <p className="text-lg dark:text-gray-300">
+                  {banner.description}
+                </p>
+                <button className="btn btn-secondary text-white px-6 py-2">
+                  Explore Groups
+                </button>
               </div>
             </div>
           </SwiperSlide>
