@@ -1,6 +1,6 @@
 import React, { use, useState } from "react";
 import { IoMdEye, IoMdEyeOff } from "react-icons/io";
-import { Link, useNavigate } from "react-router";
+import { Link, Navigate, useNavigate } from "react-router";
 import { AuthContext } from "../../contexts/AuthContext";
 import toast from "react-hot-toast";
 import { getFormData } from "../../utils/GetFormData";
@@ -10,7 +10,9 @@ import register from "../../../public/login.json";
 const Register = () => {
   const [show, setShow] = useState(false);
   const navigate = useNavigate();
-  const { createUser, updateUser, setLoading, setUser } = use(AuthContext);
+  const { createUser, updateUser, setLoading, setUser, user } =
+    use(AuthContext);
+  if (user?.email) return <Navigate to={"/"} />;
   const handleRegister = (e) => {
     e.preventDefault();
     const form = e.target;

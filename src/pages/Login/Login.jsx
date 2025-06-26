@@ -1,14 +1,15 @@
 import React, { use } from "react";
-import { Link, useLocation, useNavigate } from "react-router";
+import { Link, Navigate, useLocation, useNavigate } from "react-router";
 import { AuthContext } from "../../contexts/AuthContext";
 import toast from "react-hot-toast";
 import { getFormData } from "../../utils/GetFormData";
 import login from "../../../public/register.json";
 import Lottie from "lottie-react";
 const Login = () => {
-  const { signInWithGoogle, signInUser, setLoading } = use(AuthContext);
+  const { signInWithGoogle, signInUser, setLoading, user } = use(AuthContext);
   const navigate = useNavigate();
   const { state } = useLocation();
+  if (user?.email && !state) return <Navigate to={"/"} />;
   const handleLogin = (e) => {
     e.preventDefault();
     const form = e.target;
