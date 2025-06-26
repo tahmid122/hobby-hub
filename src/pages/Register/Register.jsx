@@ -6,17 +6,20 @@ import toast from "react-hot-toast";
 import { getFormData } from "../../utils/GetFormData";
 import Lottie from "lottie-react";
 import register from "../../../public/login.json";
+import { getImgURL } from "../../utils/getImgURL";
 
 const Register = () => {
   const [show, setShow] = useState(false);
+  const [imgPreview, setImgPreview] = useState(null);
   const navigate = useNavigate();
   const { createUser, updateUser, setLoading, setUser, user } =
     use(AuthContext);
   if (user?.email) return <Navigate to={"/"} />;
-  const handleRegister = (e) => {
+  const handleRegister = async (e) => {
     e.preventDefault();
     const form = e.target;
     const data = getFormData(form);
+    data.photoURL = await getImgURL(data.photoURL);
     const regex = /^(?=.*[a-z])(?=.*[A-Z]).{6,}$/;
     if (!regex.test(data.password)) {
       toast.error(
@@ -76,16 +79,28 @@ const Register = () => {
                 htmlFor="photoURL"
                 className="block text-sm/6 font-medium text-gray-900 dark:text-white"
               >
-                Photo URL
+                Photo
               </label>
               <div className="mt-2">
                 <input
                   name="photoURL"
-                  type="text"
+                  type="file"
+                  onChange={(e) => {
+                    const img = e.target.files[0];
+                    const url = URL.createObjectURL(img);
+                    setImgPreview(url);
+                  }}
                   required
                   className="block w-full rounded bg-white px-3 py-1.5 text-base text-gray-900 outline-1 -outline-offset-1 outline-slate-500 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-slate-500 sm:text-sm/6 dark:bg-slate-900 dark:text-white"
                 />
               </div>
+              {imgPreview && (
+                <img
+                  className="h-[200px] w-[200px] mt-5 mx-auto object-cover  rounded"
+                  src={imgPreview}
+                  alt=""
+                />
+              )}
             </div>
             <div>
               <label

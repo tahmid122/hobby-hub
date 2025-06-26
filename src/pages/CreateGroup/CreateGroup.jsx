@@ -1,15 +1,20 @@
-import React, { use } from "react";
+import React, { use, useState } from "react";
 import { AuthContext } from "../../contexts/AuthContext";
 import { getFormData } from "../../utils/GetFormData";
 import Swal from "sweetalert2";
 import { useNavigate } from "react-router";
+import { getImgURL } from "../../utils/getImgURL";
 
 const CreateGroup = () => {
   const { user } = use(AuthContext);
   const navigate = useNavigate();
-  const handleSubmit = (e) => {
+  const [imgPreview, setImgPreview] = useState(null);
+
+  const handleSubmit = async (e) => {
     e.preventDefault();
     const data = getFormData(e.target);
+    data.imageUrl = await getImgURL(data.imageUrl);
+    console.log(data);
     fetch("https://hobby-hub-server-ruby.vercel.app/groups", {
       method: "POST",
       headers: {
@@ -199,16 +204,28 @@ const CreateGroup = () => {
                   htmlFor="imageUrl"
                   className="block text-sm/6 font-medium text-gray-900 dark:text-white"
                 >
-                  Image URL
+                  Image
                 </label>
                 <div className="mt-2">
                   <input
                     name="imageUrl"
-                    type="text"
+                    type="file"
+                    onChange={(e) => {
+                      const img = e.target.files[0];
+                      const url = URL.createObjectURL(img);
+                      setImgPreview(url);
+                    }}
                     required
                     className="block w-full rounded-md bg-white px-3 py-1.5 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-secondary sm:text-sm/6 dark:bg-slate-900 dark:text-white"
                   />
                 </div>
+                {imgPreview && (
+                  <img
+                    className="h-[200px] w-full mt-5 mx-auto object-cover  rounded"
+                    src={imgPreview}
+                    alt=""
+                  />
+                )}
               </div>
             </div>
             <div>

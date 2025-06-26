@@ -133,7 +133,7 @@ const NavBar = () => {
                 </button>
               </div>
             ) : (
-              <div className="space-x-3 flex">
+              <div className="flex gap-2">
                 <Link to={"/login"} className="btn btn-secondary">
                   Login
                 </Link>

@@ -1,16 +1,21 @@
-import React from "react";
+import React, { useState } from "react";
 import { useLoaderData, useNavigate } from "react-router";
 import { getFormData } from "../../utils/GetFormData";
 import Swal from "sweetalert2";
 import toast from "react-hot-toast";
+import { getImgURL } from "../../utils/getImgURL";
 
 const UpdateGroup = () => {
   const groupDetails = useLoaderData();
   const navigate = useNavigate();
-  const handleUpdate = (e) => {
+  const [imgPreview, setImgPreview] = useState(null);
+
+  const handleUpdate = async (e) => {
     e.preventDefault();
     const form = e.target;
     const data = getFormData(form);
+    data.imageUrl = await getImgURL(data.imageUrl);
+    console.log(data);
     fetch(
       `https://hobby-hub-server-ruby.vercel.app/groups/${groupDetails?._id}`,
       {
@@ -54,6 +59,7 @@ const UpdateGroup = () => {
                   <input
                     name="userName"
                     type="text"
+                    required
                     readOnly
                     defaultValue={groupDetails?.userName}
                     className="block w-full rounded-md bg-white px-3 py-1.5 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-secondary sm:text-sm/6 dark:bg-slate-900 dark:text-white"
@@ -90,6 +96,7 @@ const UpdateGroup = () => {
                   <input
                     name="groupName"
                     type="text"
+                    required
                     defaultValue={groupDetails?.groupName}
                     className="block w-full rounded-md bg-white px-3 py-1.5 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-secondary sm:text-sm/6 dark:bg-slate-900 dark:text-white"
                   />
@@ -134,6 +141,7 @@ const UpdateGroup = () => {
                 <div className="mt-2">
                   <textarea
                     name="description"
+                    required
                     defaultValue={groupDetails?.description}
                     type="text"
                     className="min-h-40 resize-none block w-full rounded-md bg-white px-3 py-1.5 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-secondary sm:text-sm/6 dark:bg-slate-900 dark:text-white"
@@ -153,6 +161,7 @@ const UpdateGroup = () => {
                   <input
                     name="location"
                     type="text"
+                    required
                     defaultValue={groupDetails?.location}
                     className="block w-full rounded-md bg-white px-3 py-1.5 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-secondary sm:text-sm/6 dark:bg-slate-900 dark:text-white"
                   />
@@ -171,6 +180,7 @@ const UpdateGroup = () => {
                   <input
                     name="maxMembers"
                     type="number"
+                    required
                     defaultValue={groupDetails?.maxMembers}
                     className="block w-full rounded-md bg-white px-3 py-1.5 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-secondary sm:text-sm/6 dark:bg-slate-900 dark:text-white"
                   />
@@ -187,6 +197,7 @@ const UpdateGroup = () => {
                   <input
                     name="date"
                     type="date"
+                    required
                     defaultValue={groupDetails?.date}
                     className="block w-full rounded-md bg-white px-3 py-1.5 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-secondary sm:text-sm/6 dark:bg-slate-900 dark:text-white"
                   />
@@ -204,11 +215,23 @@ const UpdateGroup = () => {
                 <div className="mt-2">
                   <input
                     name="imageUrl"
-                    type="text"
-                    defaultValue={groupDetails?.imageUrl}
+                    type="file"
+                    onChange={(e) => {
+                      const img = e.target.files[0];
+                      const url = URL.createObjectURL(img);
+                      setImgPreview(url);
+                    }}
+                    required
                     className="block w-full rounded-md bg-white px-3 py-1.5 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-secondary sm:text-sm/6 dark:bg-slate-900 dark:text-white"
                   />
                 </div>
+                {imgPreview && (
+                  <img
+                    className="h-[200px] w-full mt-5 mx-auto object-cover  rounded"
+                    src={imgPreview}
+                    alt=""
+                  />
+                )}
               </div>
             </div>
             <div>

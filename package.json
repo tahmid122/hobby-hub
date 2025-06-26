@@ -11,6 +11,7 @@
   },
   "dependencies": {
     "@tailwindcss/vite": "^4.1.7",
+    "axios": "^1.10.0",
     "firebase": "^11.7.3",
     "flowbite": "^3.1.2",
     "ldrs": "^1.1.7",
