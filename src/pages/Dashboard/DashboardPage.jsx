@@ -54,8 +54,8 @@ const DashboardPage = () => {
         <Profile user={user} />
       </div>
       <div className="space-y-10">
-        <div className="rounded shadow-md p-10 space-y-5">
-          <h3 className="text-3xl font-bold">Welcome {user.displayName} 🎉</h3>
+        <div className="rounded shadow-md p-10 space-y-5 dark:text-white dark:shadow dark:shadow-slate-500">
+          <h3 className="text-3xl font-bold ">Welcome {user.displayName} 🎉</h3>
           <p>
             Start your own Meetup group and create events that inspire, connect,
             and grow your community. Whether it’s a hobby, a cause, or a
