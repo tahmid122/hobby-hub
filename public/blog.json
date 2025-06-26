@@ -1,0 +1,44 @@
+[
+  {
+    "id": 1,
+    "title": "Top 5 Group Hobbies to Try This Year",
+    "summary": "From hiking to board games, discover group hobbies that spark joy and help you connect with new people.",
+    "image": "https://images.unsplash.com/photo-1554284126-aa88f22d8b74?auto=format&fit=crop&w=600&q=80",
+    "link": "/blog/top-group-hobbies"
+  },
+  {
+    "id": 2,
+    "title": "How to Start a Successful Meetup Group",
+    "summary": "Starting your own hobby group? Here's a quick guide on how to plan, promote, and run a successful meetup.",
+    "image": "https://images.unsplash.com/photo-1568992688065-536aad8a12f6?q=80&w=1332&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    "link": "/blog/start-meetup-guide"
+  },
+  {
+    "id": 3,
+    "title": "Why Hobbies Improve Your Mental Health",
+    "summary": "Learn how hobbies reduce stress, improve creativity, and build meaningful social connections.",
+    "image": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=600&q=80",
+    "link": "/blog/hobbies-mental-health"
+  },
+  {
+    "id": 4,
+    "title": "Outdoor vs Indoor Hobbies: What’s Right for You?",
+    "summary": "Explore the benefits of both indoor and outdoor hobbies to find the perfect fit for your lifestyle.",
+    "image": "https://plus.unsplash.com/premium_photo-1676321046262-4978a752fb15?q=80&w=1171&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    "link": "/blog/indoor-vs-outdoor"
+  },
+  {
+    "id": 5,
+    "title": "Creative Hobby Ideas to Try on Weekends",
+    "summary": "Make your weekends more fulfilling with these unique and creative hobby ideas perfect for short breaks.",
+    "image": "https://images.unsplash.com/photo-1512314889357-e157c22f938d?q=80&w=1171&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    "link": "/blog/weekend-hobby-ideas"
+  },
+  {
+    "id": 6,
+    "title": "The Benefits of Joining a Local Hobby Group",
+    "summary": "From building friendships to learning new skills, here's why joining a local group could be your best decision.",
+    "image": "https://plus.unsplash.com/premium_photo-1661715812379-23d652805042?q=80&w=1171&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    "link": "/blog/benefits-of-local-groups"
+  }
+]
