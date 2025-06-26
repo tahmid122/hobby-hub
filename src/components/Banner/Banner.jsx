@@ -18,7 +18,7 @@ const Banner = ({ bannerData }) => {
       >
         {bannerData?.map((banner) => (
           <SwiperSlide key={banner.id}>
-            <div className="grid grid-cols-1 lg:grid-cols-2 items-center max-w-7xl mx-auto px-4 h-full gap-8 py-8">
+            <div className="grid grid-cols-1 lg:grid-cols-2 items-center max-w-7xl mx-auto md:px-4 h-full gap-4 md:gap-8 py-8">
               {/* Image Section */}
               <div className="flex justify-center">
                 <img

@@ -61,7 +61,7 @@ const MyGroups = () => {
       <div className="w-11/12 mx-auto md:pr-5 my-5 min-h-[80vh] overflow-hidden">
         <div>
           {groups.length > 0 ? (
-            <div className="overflow-x-auto rounded-box border border-base-content/5 bg-base-100 dark:border-none dark:shadow-sm dark:shadow-slate-300">
+            <div className="overflow-x-auto rounded-box border border-base-content/5 bg-base-100 dark:border-none dark:shadow-sm dark:shadow-slate-400">
               <table className="table dark:bg-slate-900 dark:text-white">
                 {/* head */}
                 <thead className="dark:text-white">

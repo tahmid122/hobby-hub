@@ -24,7 +24,7 @@ const Recharts = () => {
 
   return (
     <div>
-      <div className="col-span-2 bg-white p-4 md:p-6 rounded shadow-md w-full dark:bg-slate-900 dark:shadow dark:shadow-slate-50">
+      <div className="col-span-2 bg-white p-4 md:p-6 rounded shadow-sm w-full dark:bg-slate-900 dark:shadow dark:shadow-slate-50">
         <h3 className="text-lg font-semibold mb-4 dark:text-white">
           Participation Overview
         </h3>

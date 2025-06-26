@@ -41,14 +41,14 @@ const GroupRow = ({ group, index, handleDelete }) => {
       <td className="flex items-center gap-3 justify-center">
         <Link
           to={`/updateGroup/${group?._id}`}
-          className="p-2 hover:bg-secondary hover:text-white  rounded shadow-sm border border-slate-100 cursor-pointer dark:border-none dark:shadow-sm dark:shadow-slate-300"
+          className="p-2 hover:bg-secondary hover:text-white  rounded shadow-sm border border-slate-100 cursor-pointer dark:border-none dark:shadow-sm dark:shadow-slate-400"
           title="Update"
         >
           <FaPenClip size={18} />
         </Link>
         <span
           onClick={() => handleDelete(group?._id)}
-          className="p-2  rounded hover:bg-red-500 hover:text-white shadow-sm border border-slate-100 cursor-pointer dark:border-none dark:shadow-sm dark:shadow-slate-300"
+          className="p-2  rounded hover:bg-red-500 hover:text-white shadow-sm border border-slate-100 cursor-pointer dark:border-none dark:shadow-sm dark:shadow-slate-400"
           title="Delete"
         >
           <FaTrash size={18} />

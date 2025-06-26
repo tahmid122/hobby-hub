@@ -12,7 +12,7 @@ const Profile = ({ user }) => {
   //     role: "Group Organizer",
   //   };
   return (
-    <div className="relative w-full md:max-w-md mx-auto bg-white dark:bg-gray-900 rounded shadow-md overflow-hidden p-6 dark:shadow dark:shadow-slate-500">
+    <div className="relative w-full md:max-w-md mx-auto bg-white dark:bg-gray-900 rounded shadow-sm overflow-hidden p-6 dark:shadow dark:shadow-slate-500">
       {/* Edit Button */}
       <button
         className="absolute top-4 right-4 flex items-center gap-1 text-sm text-blue-600 hover:text-blue-800 dark:text-blue-400 dark:hover:text-blue-300"

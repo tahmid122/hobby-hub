@@ -12,7 +12,7 @@ const Categories = ({ categoriesPromise }) => {
           <Link
             to={`/category/${category.title}`}
             key={category.id}
-            className="text-center rounded p-3 flex items-center justify-center flex-col  space-y-3 hover:bg-gray-50 dark:hover:bg-slate-900 dark:border-none dark:shadow-sm dark:shadow-slate-300"
+            className="text-center rounded p-3 flex items-center justify-center flex-col  space-y-3 hover:bg-gray-50 dark:hover:bg-slate-900 dark:border-none dark:shadow-sm dark:shadow-slate-400"
           >
             <span className="text-5xl block">{category.icon}</span>
             <p className="text-lg font-bold underline">{category.title}</p>

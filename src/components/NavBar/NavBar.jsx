@@ -48,7 +48,7 @@ const NavBar = () => {
   );
   //myGroups, create groups
   return (
-    <div className="shadow-xs shadow-slate-400 dark:bg-slate-900 dark:text-white dark:border-b dark:border-b-slate-300 sticky top-0 left-0 bg-white z-20 lg:z-50">
+    <div className="shadow-xs shadow-slate-400 dark:bg-slate-900 dark:text-white sticky top-0 left-0 bg-white z-20 lg:z-50">
       <div className="navbar md:w-11/12 mx-auto">
         <div className="navbar-start">
           <div className="dropdown">
@@ -124,7 +124,10 @@ const NavBar = () => {
                 >
                   Dashboard
                 </Link>
-                <button onClick={handleLogOut} className="btn btn-secondary">
+                <button
+                  onClick={handleLogOut}
+                  className="btn bg-orange-600 text-white border-none outline-none shadow-none"
+                >
                   Logout
                 </button>
               </div>

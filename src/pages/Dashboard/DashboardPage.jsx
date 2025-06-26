@@ -56,7 +56,7 @@ const DashboardPage = () => {
           <Profile user={user} />
         </div>
         <div className="space-y-10">
-          <div className="rounded shadow-md p-4 md:p-10 space-y-5 dark:text-white dark:shadow dark:shadow-slate-500">
+          <div className="rounded shadow-sm p-4 md:p-10 space-y-5 dark:text-white dark:shadow dark:shadow-slate-500">
             <h3 className="text-3xl font-bold dark">
               Welcome {user.displayName} 🎉
             </h3>
@@ -73,7 +73,7 @@ const DashboardPage = () => {
             {cardData.map((card, idx) => (
               <div
                 key={idx}
-                className={`p-5 rounded-xl shadow-md flex items-center justify-between ${card.bg}`}
+                className={`p-5 rounded-xl shadow-sm flex items-center justify-between ${card.bg}`}
               >
                 <div>
                   <h3 className="text-sm text-gray-600 font-medium">

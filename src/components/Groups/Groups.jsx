@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from "react";
-import GroupCard from "./GroupCard";
 import LoadingSpinner from "../LoadingSpinner/LoadingSpinner";
 import { formatDateToYYYYMMDD } from "../../utils/FormatDate";
 import Title from "../Title/Title";
+import GroupCard from "../../pages/AllGroups/GroupCard";
 const Groups = () => {
   const [groups, setGroups] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
@@ -28,8 +28,8 @@ const Groups = () => {
       <Title title={"Featured Groups"} />
       {isLoading ? <LoadingSpinner /> : ""}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-        {groups?.slice(0, 6)?.map((group) => (
-          <GroupCard key={group?._id} group={group} />
+        {groups?.map((group) => (
+          <GroupCard key={group._id} group={group} />
         ))}
       </div>
     </div>

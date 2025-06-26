@@ -11,7 +11,7 @@ const Testimonial = ({ testimonialPromise }) => {
         {testimonial?.map((test) => (
           <div
             key={test.id}
-            className="bg-white shadow-md border border-slate-200 rounded dark:border-none dark:shadow-sm shadow-slate-300 dark:bg-slate-900"
+            className="bg-white shadow-sm rounded dark:border-none dark:shadow-sm shadow-slate-400 dark:bg-slate-900"
           >
             <div className="max-w-screen-xl px-4 py-8 mx-auto text-center lg:py-16 lg:px-6">
               <div className="max-w-screen-md mx-auto">

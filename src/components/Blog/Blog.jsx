@@ -15,7 +15,7 @@ const Blog = ({ blogsPromise = {} }) => {
             {blogs.map((blog) => (
               <div
                 key={blog.id}
-                className="bg-white shadow-md rounded overflow-hidden dark:shadow-sm dark:shadow-slate-300 dark:text-white dark:bg-slate-900"
+                className="bg-white shadow-sm rounded overflow-hidden dark:shadow-sm dark:shadow-slate-400 dark:text-white dark:bg-slate-900"
               >
                 <img
                   src={blog.image}

@@ -6,7 +6,7 @@ const GroupCard = ({ group }) => {
   return (
     <div
       key={group?._id}
-      className="flex flex-col md:items-center  gap-6  rounded pr-2 dark:shadow-sm dark:shadow-slate-300 dark:text-white dark:p-2"
+      className="flex flex-col md:items-center  gap-6  rounded pr-2 dark:shadow-sm dark:shadow-slate-400 dark:text-white dark:p-2"
     >
       <img
         className="h-[250px] w-full md:h-[210px] object-cover  rounded-lg bg-black"
