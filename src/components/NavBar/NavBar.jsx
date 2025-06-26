@@ -39,6 +39,11 @@ const NavBar = () => {
           Contact
         </NavLink>
       </li>
+      <li>
+        <NavLink className="rounded-none md:hidden block" to={"/dashboard"}>
+          Dashboard
+        </NavLink>
+      </li>
     </>
   );
   //myGroups, create groups
@@ -115,7 +120,7 @@ const NavBar = () => {
               <div className="flex items-center gap-2">
                 <Link
                   to={"/dashboard"}
-                  className="btn btn-outline hover:bg-secondary hover:text-white transition-all duration-500 dark:border-slate-500 hover:shadow-none"
+                  className="btn hidden md:flex btn-outline hover:bg-secondary hover:text-white transition-all duration-500 dark:border-slate-500 hover:shadow-none"
                 >
                   Dashboard
                 </Link>

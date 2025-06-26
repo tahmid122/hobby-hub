@@ -9,7 +9,7 @@ import { FaGithub, FaYoutube } from "react-icons/fa6";
 const About = () => {
   return (
     <div className="">
-      <div className="bg-secondary p-8 lg:p-40">
+      <div className="bg-secondary p-4 md:p-8 lg:p-40">
         <div className=" text-white lg:w-1/2">
           <h1 className="text-3xl lg:text-4xl font-semibold mb-5">
             HobbyHub <br /> creates possibilities to find and build local
@@ -62,7 +62,7 @@ const About = () => {
           <h1 className="text-3xl md:text-4xl font-bold text-center mb-10 dark:text-white">
             Follow
           </h1>
-          <div className="my-10 grid grid-cols-4">
+          <div className="my-10 grid grid-cols-2 md:grid-cols-4">
             <Link
               to={"https://www.facebook.com/TahmidAlamJG"}
               target="_blank"

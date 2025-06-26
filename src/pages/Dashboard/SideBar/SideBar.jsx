@@ -5,7 +5,7 @@ import { MdSpaceDashboard } from "react-icons/md";
 const Sidebar = ({ isOpen, onClose }) => {
   return (
     <aside
-      className={`fixed top-0 left-0 min-h-screen w-64 p-6 bg-white dark:bg-gray-900 text-gray-800 dark:text-white shadow-lg z-20 transform transition-transform duration-300 ${
+      className={`min-h-screen w-64 p-6 bg-white dark:bg-gray-900 text-gray-800 dark:text-white shadow-lg z-20 transform transition-transform duration-300 ${
         isOpen ? "translate-x-0" : "-translate-x-full"
       } md:translate-x-0 md:static md:block`}
     >
@@ -17,7 +17,8 @@ const Sidebar = ({ isOpen, onClose }) => {
       </div>
 
       <div className="mb-10 text-2xl font-bold flex items-center gap-2">
-        <MdSpaceDashboard className="text-secondary" /> <span>Dashboard</span>
+        <MdSpaceDashboard className="text-secondary dark:text-white" />{" "}
+        <span>Dashboard</span>
       </div>
 
       <ul className="space-y-4 text-base font-medium">

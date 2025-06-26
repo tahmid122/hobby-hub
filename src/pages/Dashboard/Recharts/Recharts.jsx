@@ -24,7 +24,7 @@ const Recharts = () => {
 
   return (
     <div>
-      <div className="col-span-2 bg-white p-6 rounded shadow-md w-full dark:bg-slate-900 dark:shadow dark:shadow-slate-50">
+      <div className="col-span-2 bg-white p-4 md:p-6 rounded shadow-md w-full dark:bg-slate-900 dark:shadow dark:shadow-slate-50">
         <h3 className="text-lg font-semibold mb-4 dark:text-white">
           Participation Overview
         </h3>
@@ -34,7 +34,7 @@ const Recharts = () => {
           <BarChart data={participationData}>
             {/* <CartesianGrid strokeDasharray="3 3" /> */}
             <XAxis dataKey="month" />
-            <YAxis allowDecimals={false} />
+            {/* <YAxis allowDecimals={false} /> */}
             <Tooltip />
             <Legend />
             <Bar dataKey="created" fill="orange" name="Groups Created" />

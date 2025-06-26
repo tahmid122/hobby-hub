@@ -3,7 +3,7 @@ import { FaArrowRight } from "react-icons/fa";
 import group from "/images/group.svg";
 const Approach = () => {
   return (
-    <div className="my-10 rounded shadow min-h-[250px] p-10 bg-white dark:text-white dark:bg-slate-900 dark:shadow-slate-400 flex flex-col-reverse md:flex-row">
+    <div className="my-10 rounded shadow min-h-[250px] p-4 md:p-10 bg-white dark:text-white dark:bg-slate-900 dark:shadow-slate-400 flex flex-col-reverse md:flex-row">
       <div>
         <h3 className="text-3xl font-bold mb-5">
           Turn your passion into a community

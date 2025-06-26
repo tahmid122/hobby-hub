@@ -140,7 +140,7 @@ const Login = () => {
           </div>
         </div>
       </div>
-      <div className="w-[400px]">
+      <div className="w-[400px] p-10">
         <Lottie animationData={login} loop={true} />
       </div>
     </div>

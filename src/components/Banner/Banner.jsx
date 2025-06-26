@@ -7,14 +7,14 @@ import { Link } from "react-router";
 
 const Banner = ({ bannerData }) => {
   return (
-    <div className="min-h-[70vh]">
+    <div className="md:min-h-[70vh]">
       <Swiper
         modules={[Autoplay]}
         autoplay={{
           delay: 5000,
           disableOnInteraction: false,
         }}
-        className="mySwiper h-[70vh]"
+        className="mySwiper md:h-[70vh]"
       >
         {bannerData?.map((banner) => (
           <SwiperSlide key={banner.id}>

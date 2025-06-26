@@ -1,9 +1,8 @@
 import React, { useEffect, useState } from "react";
 import NavBar from "../components/NavBar/NavBar";
-import { Link, Outlet } from "react-router";
+import { Outlet } from "react-router";
 import Footer from "../components/Footer/Footer";
-import { FiHome, FiUsers, FiPlusCircle, FiMenu } from "react-icons/fi"; // You can change these as needed
-import SideBar from "../pages/Dashboard/SideBar/SideBar";
+import { FiMenu } from "react-icons/fi"; //
 import Sidebar from "../pages/Dashboard/SideBar/SideBar";
 import ThemeChanger, { ChangeTheme } from "../utils/ThemeChanger";
 import { IoMdMoon, IoMdSunny } from "react-icons/io";
@@ -34,21 +33,21 @@ const Dashboard = () => {
           <IoMdMoon size={20} />
         </button>
       </div>
-      <div className="flex">
-        <Sidebar isOpen={sidebarOpen} onClose={() => setSidebarOpen(false)} />
-        <main className="flex-1  p-4 bg-white dark:bg-slate-900 min-h-screen">
-          {/* Toggle Button (only on small devices) */}
-          <div className="md:hidden">
-            <button
-              onClick={() => setSidebarOpen(true)}
-              className="text-2xl mb-4 text-gray-700 dark:text-white"
-            >
-              <FiMenu />
-            </button>
-          </div>
-
-          <Outlet />
-        </main>
+      <div className="min-h-screen relative flex gap-4 flex-col md:flex-row dark:bg-slate-900">
+        <button
+          onClick={() => setSidebarOpen(true)}
+          className="text-2xl mb-4 text-gray-700 dark:text-white md:hidden m-2"
+        >
+          <FiMenu />
+        </button>
+        <div
+          className={`py-5 bg-white dark:bg-slate-900 z-10 border-r border-r-slate-200 dark:border-r-slate-700 ${
+            sidebarOpen ? "-translate-x-0" : "-translate-x-full"
+          } lg:-translate-x-0 absolute lg:relative h-full lg:h-auto transition-all duration-500`}
+        >
+          <Sidebar isOpen={sidebarOpen} onClose={() => setSidebarOpen(false)} />
+        </div>
+        <Outlet />
       </div>
       <Footer />
     </div>

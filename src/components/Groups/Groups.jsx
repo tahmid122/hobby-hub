@@ -22,7 +22,7 @@ const Groups = () => {
       setIsLoading(false);
     }
   }, [today]);
-  if (isLoading || groups.length < 1) return <LoadingSpinner />;
+  if (isLoading) return <LoadingSpinner />;
   return (
     <div className="my-10">
       <Title title={"Featured Groups"} />

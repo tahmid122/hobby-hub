@@ -50,14 +50,14 @@ const DashboardPage = () => {
     },
   ];
   return (
-    <div>
+    <div className="md:my-5 mb-5 px-5 dark:bg-slate-900">
       <div className="w-full mx-auto space-y-10 flex gap-4 md:flex-row-reverse flex-col-reverse">
         <div className="grow md:flex-1/2 flex-1">
           <Profile user={user} />
         </div>
         <div className="space-y-10">
-          <div className="rounded shadow-md p-10 space-y-5 dark:text-white dark:shadow dark:shadow-slate-500">
-            <h3 className="text-3xl font-bold ">
+          <div className="rounded shadow-md p-4 md:p-10 space-y-5 dark:text-white dark:shadow dark:shadow-slate-500">
+            <h3 className="text-3xl font-bold dark">
               Welcome {user.displayName} 🎉
             </h3>
             <p>
@@ -69,7 +69,7 @@ const DashboardPage = () => {
               <button className="btn btn-secondary">Crate a group</button>
             </Link>
           </div>
-          <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-10">
+          <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4  gap-4 md:gap-6 mb-10">
             {cardData.map((card, idx) => (
               <div
                 key={idx}

@@ -42,8 +42,8 @@ const MyGroups = () => {
     });
   };
   useEffect(() => {
-    setIsLoading(true);
     try {
+      setIsLoading(true);
       fetch(
         `https://m10-assignment10-server.vercel.app/user-groups/${user.email}`
       )
@@ -55,13 +55,10 @@ const MyGroups = () => {
       setIsLoading(false);
     }
   }, [user]);
-  if (isLoading || groups.length < 1) return <LoadingSpinner />;
   return (
     <>
-      <div className="w-11/12 mx-auto p-2 my-10 min-h-[80vh]">
-        <h1 className="text-4xl font-bold mb-10 dark:text-white">
-          My Groups ({groups.length})
-        </h1>
+      {isLoading ? <LoadingSpinner /> : ""}
+      <div className="w-11/12 mx-auto p-0 my-5 min-h-[80vh]">
         <div>
           {groups.length > 0 ? (
             <div className="overflow-x-auto rounded-box border border-base-content/5 bg-base-100 dark:border-none dark:shadow-sm dark:shadow-slate-300">
