@@ -83,7 +83,6 @@ const NavBar = () => {
             <span className="text-3xl font-semibold text-secondary dark:text-white">
               HobbyHub
             </span>
-            {/* <img className="h-12 w-full" src={smileLogo} alt="" /> */}
           </Link>
         </div>
         <div className="navbar-center hidden lg:flex">
@@ -101,12 +100,14 @@ const NavBar = () => {
                 >
                   <div className="tooltip tooltip-bottom flex items-center justify-center">
                     {user?.photoURL ? (
-                      <img
-                        referrerPolicy="no-referrer"
-                        className="w-10 h-10  rounded-full border-secondary border-2"
-                        src={user.photoURL}
-                        alt="image"
-                      />
+                      <Link to={"/dashboard"}>
+                        <img
+                          referrerPolicy="no-referrer"
+                          className="w-10 h-10  rounded-full border-orange-600 border-2"
+                          src={user.photoURL}
+                          alt="image"
+                        />
+                      </Link>
                     ) : (
                       <FaUserCircle size={40} />
                     )}

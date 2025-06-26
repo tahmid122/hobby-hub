@@ -15,7 +15,7 @@ const Profile = ({ user }) => {
     <div className="relative w-full md:max-w-md mx-auto bg-white dark:bg-gray-900 rounded shadow-sm overflow-hidden p-6 dark:shadow dark:shadow-slate-500">
       {/* Edit Button */}
       <button
-        className="absolute top-4 right-4 flex items-center gap-1 text-sm text-blue-600 hover:text-blue-800 dark:text-blue-400 dark:hover:text-blue-300"
+        className="absolute top-4 right-4 flex items-center gap-1 text-sm text-orange-600"
         title="Edit Profile"
       >
         <FiEdit />
@@ -27,7 +27,7 @@ const Profile = ({ user }) => {
         <img
           src={user.photoURL}
           alt="User Avatar"
-          className="w-20 h-20 rounded-full border-4 border-blue-400"
+          className="w-20 h-20 rounded-full border-4 border-orange-600"
         />
         <div>
           <h2 className="text-2xl font-bold text-gray-800 dark:text-white">

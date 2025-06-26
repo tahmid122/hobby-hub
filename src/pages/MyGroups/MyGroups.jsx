@@ -96,7 +96,7 @@ const MyGroups = () => {
               <h3 className="text-xl font-semibold dark:text-white">
                 You haven't create any group yet
               </h3>
-              <Link to={"/createGroup"} className="btn btn-secondary">
+              <Link to={"/dashboard/createGroup"} className="btn btn-secondary">
                 Create a group
               </Link>
             </div>

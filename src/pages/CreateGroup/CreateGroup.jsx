@@ -30,7 +30,7 @@ const CreateGroup = () => {
       });
   };
   return (
-    <div className="md:my-5 w-11/12 mx-auto min-h-[75vh] flex items-center justify-center">
+    <div className="md:my-5 w-11/12 mx-auto min-h-[75vh] flex items-center justify-center mb-10 md:mb-5">
       <div className="flex min-h-full flex-col justify-center px-6  lg:px-8 w-full lg:w-6/12 mx-auto py-10 rounded shadow-sm shadow-slate-400">
         <div className="sm:mx-auto sm:w-full sm:max-w-sm">
           <h2 className="text-center text-2xl/9 font-bold tracking-tight text-gray-900 dark:text-white">

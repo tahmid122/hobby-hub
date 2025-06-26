@@ -73,8 +73,8 @@ const Contact = () => {
         </form>
 
         <div className="mt-10 text-center space-y-2 text-gray-600 dark:text-white dark:bg-slate-900 dark:border-slate-500 dark:text-white">
-          <p>📧 Email: support@yourmeetup.com</p>
-          <p>📱 Phone: +880 123-456-7890</p>
+          <p>📧 Email: support@hobbyhub.com</p>
+          <p>📱 Phone: +880 1318195591</p>
           <p>🌍 Address: Dhaka, Bangladesh</p>
         </div>
       </div>

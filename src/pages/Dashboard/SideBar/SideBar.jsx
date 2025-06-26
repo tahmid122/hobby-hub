@@ -1,4 +1,4 @@
-import { Link } from "react-router";
+import { Link, NavLink } from "react-router";
 import { FiHome, FiUsers, FiPlusCircle, FiX } from "react-icons/fi";
 import { MdSpaceDashboard } from "react-icons/md";
 
@@ -21,33 +21,36 @@ const Sidebar = ({ isOpen, onClose }) => {
         <span>Dashboard</span>
       </div>
 
-      <ul className="space-y-4 text-base font-medium">
+      <ul className="space-y-2 text-base font-medium dBoard">
         <li>
-          <Link
+          <NavLink
             to="/dashboard"
-            className="flex items-center gap-3 hover:text-blue-600 transition"
+            end
+            className="flex items-center gap-3 duration-300 hover:text-white rounded p-2 hover:bg-orange-600 transition"
           >
             <FiHome />
             Home
-          </Link>
+          </NavLink>
         </li>
         <li>
-          <Link
+          <NavLink
             to="/dashboard/myGroups"
-            className="flex items-center gap-3 hover:text-blue-600 transition"
+            end
+            className="flex items-center gap-3 duration-300 hover:text-white rounded p-2 hover:bg-orange-600 transition"
           >
             <FiUsers />
             My Groups
-          </Link>
+          </NavLink>
         </li>
         <li>
-          <Link
+          <NavLink
             to="/dashboard/createGroup"
-            className="flex items-center gap-3 hover:text-blue-600 transition"
+            end
+            className="flex items-center gap-3 duration-300 hover:text-white rounded p-2 hover:bg-orange-600 transition"
           >
             <FiPlusCircle />
             Create Group
-          </Link>
+          </NavLink>
         </li>
       </ul>
     </aside>

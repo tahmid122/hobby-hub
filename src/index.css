@@ -33,6 +33,9 @@
   -webkit-background-clip: text;
   animation: shine 15s linear infinite;
 }
+.dBoard .active {
+  @apply bg-orange-600 text-white;
+}
 
 @keyframes shine {
   0% {
