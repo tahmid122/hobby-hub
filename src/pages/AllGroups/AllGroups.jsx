@@ -26,7 +26,6 @@ const AllGroups = () => {
     const fieldValue = e.target.value;
     setIsFiltered(true);
     if (fieldName === "order") {
-      console.log("f order", fieldValue);
       if (fieldValue === "descending") {
         const sortingData = [...groups].sort((a, b) => {
           const dateA = new Date(a.date);
@@ -48,7 +47,7 @@ const AllGroups = () => {
       if (fieldValue === "default") {
         setGroups(groupsData);
       } else {
-        const filteredData = groups.filter(
+        const filteredData = groupsData.filter(
           (group) => group.category === fieldValue
         );
         setGroups(filteredData);
@@ -166,7 +165,7 @@ const AllGroups = () => {
                         onChange={handleFilter}
                         ref={memSelectRef}
                         name="members"
-                        className="p-2 border border-slate-300 rounded w-full outline-none"
+                        className="p-2 border border-slate-300 rounded w-full outline-none dark:text-white dark:bg-slate-900"
                       >
                         {" "}
                         <option value="" hidden></option>

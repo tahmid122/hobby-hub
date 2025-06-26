@@ -16,6 +16,7 @@ import Contact from "../pages/Contact/Contact";
 import BlogDetails from "../components/Blog/BlogDetails";
 import Dashboard from "../layouts/Dashboard";
 import DashboardPage from "../pages/Dashboard/DashboardPage";
+import Category from "../pages/Category/Category";
 
 export const router = createBrowserRouter([
   {
@@ -48,6 +49,12 @@ export const router = createBrowserRouter([
         path: "blog/:id",
         Component: BlogDetails,
         loader: () => fetch("/blog.json"),
+      },
+      {
+        path: "/category/:cat",
+        Component: Category,
+        loader: () =>
+          fetch("https://m10-assignment10-server.vercel.app/groups"),
       },
       {
         path: "groups",

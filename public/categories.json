@@ -1,32 +1,32 @@
 [
   {
     "id": 1,
-    "icon": "📚",
-    "title": "Book Clubs"
+    "icon": "🎨",
+    "title": "Drawing & Painting"
   },
   {
     "id": 2,
-    "icon": "🚵‍♀️",
-    "title": "Hiking Groups"
-  },
-  {
-    "id": 3,
-    "icon": "🎨",
-    "title": "Art & Painting Circles"
-  },
-  {
-    "id": 4,
-    "icon": "🎮",
-    "title": "Gaming"
-  },
-  {
-    "id": 5,
-    "icon": "📷",
+    "icon": "📸",
     "title": "Photography"
   },
   {
+    "id": 3,
+    "icon": "🎮",
+    "title": "Video Gaming"
+  },
+  {
+    "id": 4,
+    "icon": "🐟",
+    "title": "Fishing"
+  },
+  {
+    "id": 5,
+    "icon": "🏃‍♀️",
+    "title": "Running"
+  },
+  {
     "id": 6,
-    "icon": "🧘",
-    "title": "Yoga & Wellness"
+    "icon": "📝",
+    "title": "Writing"
   }
 ]

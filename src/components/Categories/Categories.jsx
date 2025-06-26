@@ -13,7 +13,7 @@ const Categories = ({ categoriesPromise }) => {
       <div className="grid grid-cols-1 md:grid-cols-3  lg:grid-cols-6 gap-3">
         {categories?.map((category) => (
           <Link
-            to={"/"}
+            to={`/category/${category.title}`}
             key={category.id}
             className="text-center rounded p-3 flex items-center justify-center flex-col  space-y-3 hover:bg-gray-50 dark:hover:bg-slate-900 dark:border-none dark:shadow-sm dark:shadow-slate-300"
           >
