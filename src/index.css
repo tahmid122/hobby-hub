@@ -17,12 +17,6 @@
 .nav-bar a.active {
   font-weight: bold;
 }
-.group-active {
-  font-weight: bolder;
-  border-bottom: 3px solid #de2a8a;
-  padding-bottom: 3px;
-  color: #de2a8a;
-}
 .shiny-text {
   position: relative;
   display: inline-block;

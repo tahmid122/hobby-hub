@@ -26,6 +26,7 @@ const Sidebar = ({ isOpen, onClose }) => {
           <NavLink
             to="/dashboard"
             end
+            onClick={onClose}
             className="flex items-center gap-3 duration-300 hover:text-white rounded p-2 hover:bg-orange-600 transition"
           >
             <FiHome />
@@ -36,6 +37,7 @@ const Sidebar = ({ isOpen, onClose }) => {
           <NavLink
             to="/dashboard/myGroups"
             end
+            onClick={onClose}
             className="flex items-center gap-3 duration-300 hover:text-white rounded p-2 hover:bg-orange-600 transition"
           >
             <FiUsers />
@@ -46,6 +48,7 @@ const Sidebar = ({ isOpen, onClose }) => {
           <NavLink
             to="/dashboard/createGroup"
             end
+            onClick={onClose}
             className="flex items-center gap-3 duration-300 hover:text-white rounded p-2 hover:bg-orange-600 transition"
           >
             <FiPlusCircle />
