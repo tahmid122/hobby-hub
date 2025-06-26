@@ -75,7 +75,7 @@ const AllGroups = () => {
     <>
       <div className="w-11/12 mx-auto p-2 my-10 min-h-[80vh]">
         <div className="flex md:flex-row flex-col gap-5 items-center justify-between mb-10">
-          <h1 className="text-4xl font-bold dark:text-white">
+          <h1 className="text-3xl md:text-4xl font-bold dark:text-white">
             All Groups ({groups.length})
           </h1>
           <div className="flex items-center gap-2">

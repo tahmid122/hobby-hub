@@ -65,21 +65,21 @@ const Footer = () => {
             <h6 className="footer-title">Social Media</h6>
             <div className="flex items-center gap-6">
               <a
-                className="hover:text-secondary"
+                className=""
                 href="https://www.facebook.com/TahmidAlamJG"
                 target="_blank"
               >
                 <FaFacebook size={24} />
               </a>
               <a
-                className="hover:text-secondary"
+                className=""
                 href="https://www.linkedin.com/in/tahmidalam122/"
                 target="_blank"
               >
                 <FaLinkedin size={24} />
               </a>
               <a
-                className="hover:text-secondary"
+                className=""
                 href="https://github.com/tahmid122"
                 target="_blank"
               >

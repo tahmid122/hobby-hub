@@ -1,5 +1,6 @@
 import { Link } from "react-router";
 import { FiHome, FiUsers, FiPlusCircle, FiX } from "react-icons/fi";
+import { MdSpaceDashboard } from "react-icons/md";
 
 const Sidebar = ({ isOpen, onClose }) => {
   return (
@@ -16,8 +17,7 @@ const Sidebar = ({ isOpen, onClose }) => {
       </div>
 
       <div className="mb-10 text-2xl font-bold flex items-center gap-2">
-        <FiHome className="text-blue-500" />
-        <span>Dashboard</span>
+        <MdSpaceDashboard className="text-secondary" /> <span>Dashboard</span>
       </div>
 
       <ul className="space-y-4 text-base font-medium">
