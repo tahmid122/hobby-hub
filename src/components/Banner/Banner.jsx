@@ -3,6 +3,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
+import { Link } from "react-router";
 
 const Banner = ({ bannerData }) => {
   return (
@@ -35,9 +36,12 @@ const Banner = ({ bannerData }) => {
                 <p className="text-lg dark:text-gray-300">
                   {banner.description}
                 </p>
-                <button className="btn btn-secondary text-white px-6 py-2">
+                <Link
+                  to={"/groups"}
+                  className="btn btn-secondary text-white px-6 py-2"
+                >
                   Explore Groups
-                </button>
+                </Link>
               </div>
             </div>
           </SwiperSlide>

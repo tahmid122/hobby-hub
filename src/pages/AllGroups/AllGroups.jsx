@@ -106,7 +106,7 @@ const AllGroups = () => {
                     className="drawer-overlay"
                   ></label>
 
-                  <div className="menu bg-white text-base-content min-h-full w-80 p-4 space-y-5">
+                  <div className="menu bg-white text-base-content min-h-full w-80 p-4 space-y-5 dark:bg-slate-900 dark:text-white">
                     {/* Sidebar content here */}
                     <div className="flex items-center justify-between mb-5">
                       <h3 className="text-3xl font-bold ">Filter by</h3>
@@ -119,7 +119,7 @@ const AllGroups = () => {
                             catSelectRef.current.value = "";
                             memSelectRef.current.value = "";
                           }}
-                          className="btn bg-red-500 text-white"
+                          className="btn bg-red-500 text-white shadow-none border-none"
                         >
                           Reset
                         </button>
@@ -131,7 +131,7 @@ const AllGroups = () => {
                         onChange={handleFilter}
                         name="order"
                         ref={orderSelectRef}
-                        className="p-2 border border-slate-300 rounded w-full outline-none"
+                        className="p-2 border border-slate-300 rounded w-full outline-none dark:text-white dark:bg-slate-900"
                       >
                         <option value="" hidden></option>
                         <option value="ascending">Ascending</option>
@@ -144,7 +144,7 @@ const AllGroups = () => {
                         onChange={handleFilter}
                         ref={catSelectRef}
                         name="category"
-                        className="p-2 border border-slate-300 rounded w-full outline-none"
+                        className="p-2 border border-slate-300 rounded w-full outline-none dark:text-white dark:bg-slate-900"
                       >
                         {" "}
                         <option value="" hidden></option>
@@ -160,7 +160,7 @@ const AllGroups = () => {
                         <option value="Writing">Writing</option>
                       </select>
                     </div>
-                    <div className="w-full flex items-center justify-between gap-4">
+                    <div className="w-full flex items-center justify-between gap-4 dark:text-white dark:bg-slate-900">
                       <span className="text-xl font-semibold">Members:</span>
                       <select
                         onChange={handleFilter}
