@@ -25,7 +25,7 @@ const GroupDetails = () => {
       />
       <div className="my-5">
         <div>
-          <small className="font-bold text-xl text-secondary">
+          <small className="font-bold text-xl text-secondary dark:text-slate-300">
             Start Date: {group?.date}
           </small>
           <h2 className="text-3xl md:text-4xl font-bold dark:text-white">

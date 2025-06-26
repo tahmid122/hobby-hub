@@ -1,14 +1,12 @@
 import React, { use } from "react";
 import { Link } from "react-router";
-import { Typewriter } from "react-simple-typewriter";
 
 const Categories = ({ categoriesPromise }) => {
   const categories = use(categoriesPromise);
   return (
     <div className="my-20 dark:text-white">
       <h1 className="text-3xl md:text-4xl font-bold text-center mb-10">
-        Popular
-        <Typewriter words={[" Communities"]} loop={false} />
+        Popular Communities
       </h1>
       <div className="grid grid-cols-1 md:grid-cols-3  lg:grid-cols-6 gap-3">
         {categories?.map((category) => (

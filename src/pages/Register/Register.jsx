@@ -4,6 +4,8 @@ import { Link, useNavigate } from "react-router";
 import { AuthContext } from "../../contexts/AuthContext";
 import toast from "react-hot-toast";
 import { getFormData } from "../../utils/GetFormData";
+import Lottie from "lottie-react";
+import register from "../../../public/login.json";
 
 const Register = () => {
   const [show, setShow] = useState(false);
@@ -44,16 +46,13 @@ const Register = () => {
   };
 
   return (
-    <div className="my-5 w-11/12 mx-auto min-h-[75vh]">
-      <div className="flex min-h-full flex-col justify-center px-6  lg:px-8 md:w-6/12 mx-auto py-10 rounded shadow-sm shadow-slate-400">
-        <div className="sm:mx-auto sm:w-full sm:max-w-sm">
-          <h2 className="text-center text-2xl/9 font-bold tracking-tight text-gray-900 dark:text-white">
-            Register your account
-          </h2>
-        </div>
-
-        <div className="mt-10 sm:mx-auto sm:w-full sm:max-w-sm">
-          <form onSubmit={handleRegister} className="space-y-6">
+    <div className="w-11/12 mx-auto py-10 flex flex-col md:flex-row items-center justify-center gap-5 min-h-[80vh]">
+      <div className="w-full md:w-[400px]">
+        <h2 className="text-center text-2xl/9 font-bold tracking-tight text-gray-900 dark:text-white">
+          Create a new account
+        </h2>
+        <div className="px-5 py-5 shadow mt-10 dark:shadow dark:shadow-slate-50">
+          <form onSubmit={handleRegister} className="space-y-4">
             <div>
               <label
                 htmlFor="Name"
@@ -66,7 +65,7 @@ const Register = () => {
                   name="name"
                   type="text"
                   required
-                  className="block w-full rounded-md bg-white px-3 py-1.5 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-secondary sm:text-sm/6 dark:bg-slate-900 dark:text-white"
+                  className="block w-full rounded bg-white px-3 py-1.5 text-base text-gray-900 outline-1 -outline-offset-1 outline-slate-500 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-slate-500 sm:text-sm/6 dark:bg-slate-900 dark:text-white"
                 />
               </div>
             </div>
@@ -82,7 +81,7 @@ const Register = () => {
                   name="photoURL"
                   type="text"
                   required
-                  className="block w-full rounded-md bg-white px-3 py-1.5 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-secondary sm:text-sm/6 dark:bg-slate-900 dark:text-white"
+                  className="block w-full rounded bg-white px-3 py-1.5 text-base text-gray-900 outline-1 -outline-offset-1 outline-slate-500 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-slate-500 sm:text-sm/6 dark:bg-slate-900 dark:text-white"
                 />
               </div>
             </div>
@@ -100,7 +99,7 @@ const Register = () => {
                   type="email"
                   required
                   autoComplete="email"
-                  className="block w-full rounded-md bg-white px-3 py-1.5 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-secondary sm:text-sm/6 dark:bg-slate-900 dark:text-white"
+                  className="block w-full rounded bg-white px-3 py-1.5 text-base text-gray-900 outline-1 -outline-offset-1 outline-slate-500 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-slate-500 sm:text-sm/6 dark:bg-slate-900 dark:text-white"
                 />
               </div>
             </div>
@@ -121,7 +120,7 @@ const Register = () => {
                   type={show ? "text" : "password"}
                   required
                   autoComplete="current-password"
-                  className="block w-full rounded-md bg-white px-3 py-1.5 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-secondary sm:text-sm/6 dark:bg-slate-900 dark:text-white"
+                  className="block w-full rounded bg-white px-3 py-1.5 text-base text-gray-900 outline-1 -outline-offset-1 outline-slate-500 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-slate-500 sm:text-sm/6 dark:bg-slate-900 dark:text-white"
                 />
                 <span
                   onClick={() => setShow(!show)}
@@ -149,6 +148,9 @@ const Register = () => {
             </Link>
           </p>
         </div>
+      </div>
+      <div className="w-[400px]">
+        <Lottie animationData={register} loop={true} />
       </div>
     </div>
   );

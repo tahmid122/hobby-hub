@@ -23,7 +23,7 @@ const Contact = () => {
 
   return (
     <div className="max-w-3xl mx-auto px-4 py-10">
-      <h1 className="text-3xl md:text-4xl font-bold text-center mb-10">
+      <h1 className="text-3xl md:text-4xl font-bold text-center mb-10 dark:text-white">
         Contact us{" "}
       </h1>
       <form onSubmit={handleSubmit} className="space-y-5">
@@ -31,7 +31,7 @@ const Contact = () => {
           type="text"
           name="name"
           placeholder="Your Name"
-          className="input input-bordered w-full outline-none focus:outline-none"
+          className="input input-bordered w-full outline-none focus:outline-none dark:bg-slate-900 dark:border-slate-500 dark:text-white"
           value={formData.name}
           onChange={handleChange}
           required
@@ -41,7 +41,7 @@ const Contact = () => {
           type="email"
           name="email"
           placeholder="Your Email"
-          className="input input-bordered w-full outline-none focus:outline-none"
+          className="input input-bordered w-full outline-none focus:outline-none dark:bg-slate-900 dark:border-slate-500 dark:text-white"
           value={formData.email}
           onChange={handleChange}
           required
@@ -51,7 +51,7 @@ const Contact = () => {
           type="text"
           name="subject"
           placeholder="Subject"
-          className="input input-bordered w-full outline-none focus:outline-none"
+          className="input input-bordered w-full outline-none focus:outline-none dark:bg-slate-900 dark:border-slate-500 dark:text-white"
           value={formData.subject}
           onChange={handleChange}
         />
@@ -59,7 +59,7 @@ const Contact = () => {
         <textarea
           name="message"
           placeholder="Your Message"
-          className="textarea textarea-bordered w-full h-32 outline-none focus:outline-none"
+          className="textarea textarea-bordered w-full h-32 outline-none focus:outline-none dark:bg-slate-900 dark:border-slate-500 dark:text-white"
           value={formData.message}
           onChange={handleChange}
           required
@@ -70,7 +70,7 @@ const Contact = () => {
         </button>
       </form>
 
-      <div className="mt-10 text-center space-y-2 text-gray-600">
+      <div className="mt-10 text-center space-y-2 text-gray-600 dark:text-white dark:bg-slate-900 dark:border-slate-500 dark:text-white">
         <p>📧 Email: support@yourmeetup.com</p>
         <p>📱 Phone: +880 123-456-7890</p>
         <p>🌍 Address: Dhaka, Bangladesh</p>

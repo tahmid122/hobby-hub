@@ -7,13 +7,9 @@ const Blog = ({ blogsPromise = {} }) => {
     <div className="my-10">
       <section className="bg-gray-50 py-12 px-4 md:px-10 rounded dark:bg-slate-900">
         <div className="max-w-7xl mx-auto text-center">
-          <h2 className="text-3xl font-bold mb-6 dark:text-white">
+          <h2 className="text-3xl md:text-4xl font-bold mb-6 dark:text-white">
             From Our Blog
           </h2>
-          <p className="text-gray-600 mb-10 dark:text-white">
-            Explore hobby tips, community stories, and meetup ideas from our
-            expert writers and users.
-          </p>
 
           <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3 ">
             {/* Blog Card */}

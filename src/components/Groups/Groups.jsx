@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from "react";
-import { Typewriter } from "react-simple-typewriter";
 import GroupCard from "./GroupCard";
 import LoadingSpinner from "../LoadingSpinner/LoadingSpinner";
 import { formatDateToYYYYMMDD } from "../../utils/FormatDate";
@@ -26,8 +25,7 @@ const Groups = () => {
   return (
     <div className="my-10">
       <h1 className="text-3xl md:text-4xl font-bold text-center mb-10 dark:text-white">
-        Fea
-        <Typewriter words={["tured Groups"]} loop={false} />
+        Featured Groups
       </h1>
       {isLoading ? <LoadingSpinner /> : ""}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
