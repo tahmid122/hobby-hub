@@ -7,7 +7,7 @@ const Categories = ({ categoriesPromise }) => {
   return (
     <div className="my-20 dark:text-white">
       <Title title={"Popular Communities"} />
-      <div className="grid grid-cols-2 md:grid-cols-3  lg:grid-cols-6 gap-3">
+      <div className="grid grid-cols-2 sm:grid-cols-3  lg:grid-cols-6 gap-3">
         {categories?.map((category) => (
           <Link
             to={`/category/${category.title}`}

@@ -5,7 +5,7 @@ import { MdSpaceDashboard } from "react-icons/md";
 const Sidebar = ({ isOpen, onClose }) => {
   return (
     <aside
-      className={`min-h-screen w-64 p-6 bg-white dark:bg-gray-900 text-gray-800 dark:text-white shadow-lg z-20 transform transition-transform duration-300 ${
+      className={`min-h-full w-64 p-6 bg-white dark:bg-gray-900 text-gray-800 dark:text-white shadow-lg z-20 transform transition-transform duration-300 ${
         isOpen ? "translate-x-0" : "-translate-x-full"
       } md:translate-x-0 md:static md:block`}
     >

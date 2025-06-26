@@ -20,7 +20,10 @@ const GroupRow = ({ group, index, handleDelete }) => {
       <td>{group?.category}</td>
       <td>
         {group?.description.slice(0, 20)}
-        <Link className="text-secondary" to={`/group/${group?._id}`}>
+        <Link
+          className="text-secondary dark:text-orange-600"
+          to={`/group/${group?._id}`}
+        >
           ...more
         </Link>
       </td>

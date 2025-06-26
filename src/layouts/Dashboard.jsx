@@ -41,7 +41,7 @@ const Dashboard = () => {
           <FiMenu />
         </button>
         <div
-          className={`py-5 bg-white dark:bg-slate-900 z-10 border-r border-r-slate-200 dark:border-r-slate-700 ${
+          className={`pt-5 bg-white dark:bg-slate-900 z-10 border-r border-r-slate-200 dark:border-r-slate-700 ${
             sidebarOpen ? "-translate-x-0" : "-translate-x-full"
           } lg:-translate-x-0 absolute lg:relative h-full lg:h-auto transition-all duration-500`}
         >

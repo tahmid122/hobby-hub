@@ -70,10 +70,7 @@ const Login = () => {
                   Password
                 </label>
                 <div className="text-sm">
-                  <a
-                    href="#"
-                    className="font-semibold text-secondary hover:text-[#de2aa8]"
-                  >
+                  <a href="#" className="font-semibold text-orange-600">
                     Forgot password?
                   </a>
                 </div>

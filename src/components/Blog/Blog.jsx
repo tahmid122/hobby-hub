@@ -6,7 +6,7 @@ const Blog = ({ blogsPromise = {} }) => {
   const blogs = use(blogsPromise);
   return (
     <div className="my-10">
-      <section className="bg-gray-50 py-12 px-4 md:px-10 rounded dark:bg-slate-900">
+      <section className="md:bg-gray-50 py-10 dark:p-0 px-0 md:px-10 rounded dark:bg-slate-900">
         <div className="max-w-7xl mx-auto text-center">
           <Title title={"From Our Blog"} />
 
