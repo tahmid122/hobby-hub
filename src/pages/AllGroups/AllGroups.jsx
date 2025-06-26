@@ -1,9 +1,11 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link, useLoaderData } from "react-router";
 import GroupCard from "./GroupCard";
 
 const AllGroups = () => {
-  const groups = useLoaderData();
+  const groupsData = useLoaderData();
+  const [groups, setGroups] = useState(groupsData);
+  console.log(groups);
   return (
     <div className="w-11/12 mx-auto p-2 my-10 min-h-[80vh]">
       <h1 className="text-4xl font-bold text-center mb-10 dark:text-white">

@@ -9,9 +9,6 @@ import LoadingSpinner from "../LoadingSpinner/LoadingSpinner";
 import logo from "/logo1.png";
 const NavBar = () => {
   const { user, logOutUser, loading } = use(AuthContext);
-  const mode = localStorage.getItem("mode");
-  console.log(mode);
-
   if (loading) {
     return <LoadingSpinner />;
   }

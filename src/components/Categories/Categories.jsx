@@ -10,15 +10,15 @@ const Categories = ({ categoriesPromise }) => {
         Popular
         <Typewriter words={[" Communities"]} loop={false} />
       </h1>
-      <div className="grid grid-cols-1 md:grid-cols-3  lg:grid-cols-6 gap-6">
+      <div className="grid grid-cols-1 md:grid-cols-3  lg:grid-cols-6 gap-3">
         {categories?.map((category) => (
           <Link
             to={"/"}
             key={category.id}
-            className="text-center border border-slate-200 rounded p-3 flex items-center justify-center flex-col rotate-6 space-y-3 hover:bg-gray-50 dark:hover:bg-slate-900 dark:border-none dark:shadow-sm dark:shadow-slate-300"
+            className="text-center rounded p-3 flex items-center justify-center flex-col  space-y-3 hover:bg-gray-50 dark:hover:bg-slate-900 dark:border-none dark:shadow-sm dark:shadow-slate-300"
           >
             <span className="text-5xl block">{category.icon}</span>
-            <p className="text-lg font-bold">{category.title}</p>
+            <p className="text-lg font-bold underline">{category.title}</p>
           </Link>
         ))}
       </div>

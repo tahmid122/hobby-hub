@@ -13,6 +13,7 @@ import ProtectedRoute from "./ProtectedRoute";
 import LoadingSpinner from "../components/LoadingSpinner/LoadingSpinner";
 import About from "../pages/About/About";
 import Contact from "../pages/Contact/Contact";
+import BlogDetails from "../components/Blog/BlogDetails";
 
 export const router = createBrowserRouter([
   {
@@ -40,6 +41,11 @@ export const router = createBrowserRouter([
       {
         path: "contact",
         Component: Contact,
+      },
+      {
+        path: "blog/:id",
+        Component: BlogDetails,
+        loader: () => fetch("/blog.json"),
       },
       {
         path: "groups",
