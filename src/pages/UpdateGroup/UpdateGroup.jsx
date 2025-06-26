@@ -25,7 +25,7 @@ const UpdateGroup = () => {
       .then((data) => {
         if (data.modifiedCount > 0) {
           toast.success("Your group information is updated successfully!");
-          navigate("/myGroups");
+          navigate("/dashboard/myGroups");
         } else {
           toast.error("You haven't updated anything");
         }

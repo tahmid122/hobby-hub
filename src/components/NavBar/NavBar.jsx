@@ -82,7 +82,7 @@ const NavBar = () => {
           </Link>
         </div>
         <div className="navbar-center hidden lg:flex">
-          <ul className="menu menu-horizontal px-1 nav-bar dark:text-white dark:bg-slate-900">
+          <ul className="menu menu-horizontal px-1 nav-bar dark:text-white dark:bg-slate-900 text-base">
             {links}
           </ul>
         </div>
@@ -115,7 +115,7 @@ const NavBar = () => {
               <div className="flex items-center gap-2">
                 <Link
                   to={"/dashboard"}
-                  className="btn btn-outline hover:bg-secondary hover:text-white transition-all duration-500"
+                  className="btn btn-outline hover:bg-secondary hover:text-white transition-all duration-500 dark:border-slate-500 hover:shadow-none"
                 >
                   Dashboard
                 </Link>
@@ -130,7 +130,7 @@ const NavBar = () => {
                 </Link>
                 <Link
                   to={"/register"}
-                  className="btn bg-orange-500 text-white border-none shadow-none"
+                  className="btn bg-orange-600 text-white border-none shadow-none"
                 >
                   Register
                 </Link>

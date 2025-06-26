@@ -16,9 +16,6 @@
 }
 .nav-bar a.active {
   font-weight: bold;
-  border-bottom: 3px solid #de2a8a;
-  border-left: 2px solid #de2a8a;
-  color: #de2a8a;
 }
 .group-active {
   font-weight: bolder;

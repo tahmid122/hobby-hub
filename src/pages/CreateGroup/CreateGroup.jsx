@@ -26,7 +26,7 @@ const CreateGroup = () => {
             icon: "success",
           });
         }
-        navigate("/myGroups");
+        navigate("/dashboard/myGroups");
       });
   };
   return (
