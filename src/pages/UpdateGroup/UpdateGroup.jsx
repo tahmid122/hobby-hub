@@ -12,7 +12,7 @@ const UpdateGroup = () => {
     const form = e.target;
     const data = getFormData(form);
     fetch(
-      `https://m10-assignment10-server.vercel.app/groups/${groupDetails?._id}`,
+      `https://hobby-hub-server-ruby.vercel.app/groups/${groupDetails?._id}`,
       {
         method: "PUT",
         headers: {

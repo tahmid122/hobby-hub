@@ -20,7 +20,7 @@ const MyGroups = () => {
       confirmButtonText: "Yes, delete it!",
     }).then((result) => {
       if (result.isConfirmed) {
-        fetch(`https://m10-assignment10-server.vercel.app/groups/${id}`, {
+        fetch(`https://hobby-hub-server-ruby.vercel.app/groups/${id}`, {
           method: "DELETE",
           headers: {
             "content-type": "application/json",
@@ -45,7 +45,7 @@ const MyGroups = () => {
     try {
       setIsLoading(true);
       fetch(
-        `https://m10-assignment10-server.vercel.app/user-groups/${user.email}`
+        `https://hobby-hub-server-ruby.vercel.app/user-groups/${user.email}`
       )
         .then((res) => res.json())
         .then((data) => setGroups(data));

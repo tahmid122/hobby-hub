@@ -10,7 +10,7 @@ const CreateGroup = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     const data = getFormData(e.target);
-    fetch("https://m10-assignment10-server.vercel.app/groups", {
+    fetch("https://hobby-hub-server-ruby.vercel.app/groups", {
       method: "POST",
       headers: {
         "content-type": "application/json",

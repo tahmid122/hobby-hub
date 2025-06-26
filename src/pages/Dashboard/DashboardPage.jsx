@@ -13,7 +13,7 @@ const DashboardPage = () => {
     try {
       // setIsLoading(true);
       fetch(
-        `https://m10-assignment10-server.vercel.app/user-groups/${user.email}`
+        `https://hobby-hub-server-ruby.vercel.app/user-groups/${user.email}`
       )
         .then((res) => res.json())
         .then((data) => setGroups(data));

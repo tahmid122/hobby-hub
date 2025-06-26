@@ -53,14 +53,12 @@ export const router = createBrowserRouter([
       {
         path: "/category/:cat",
         Component: Category,
-        loader: () =>
-          fetch("https://m10-assignment10-server.vercel.app/groups"),
+        loader: () => fetch("https://hobby-hub-server-ruby.vercel.app/groups"),
       },
       {
         path: "groups",
         Component: AllGroups,
-        loader: () =>
-          fetch("https://m10-assignment10-server.vercel.app/groups"),
+        loader: () => fetch("https://hobby-hub-server-ruby.vercel.app/groups"),
         hydrateFallbackElement: <LoadingSpinner />,
       },
 
@@ -72,9 +70,7 @@ export const router = createBrowserRouter([
           </ProtectedRoute>
         ),
         loader: ({ params }) =>
-          fetch(
-            `https://m10-assignment10-server.vercel.app/groups/${params.id}`
-          ),
+          fetch(`https://hobby-hub-server-ruby.vercel.app/groups/${params.id}`),
         hydrateFallbackElement: <LoadingSpinner />,
       },
       {
@@ -85,9 +81,7 @@ export const router = createBrowserRouter([
           </ProtectedRoute>
         ),
         loader: ({ params }) =>
-          fetch(
-            `https://m10-assignment10-server.vercel.app/groups/${params.id}`
-          ),
+          fetch(`https://hobby-hub-server-ruby.vercel.app/groups/${params.id}`),
         hydrateFallbackElement: <LoadingSpinner />,
       },
     ],
@@ -103,8 +97,7 @@ export const router = createBrowserRouter([
       {
         index: true,
         Component: DashboardPage,
-        loader: () =>
-          fetch("https://m10-assignment10-server.vercel.app/groups"),
+        loader: () => fetch("https://hobby-hub-server-ruby.vercel.app/groups"),
       },
       {
         path: "myGroups",

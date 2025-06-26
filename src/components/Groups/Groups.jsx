@@ -10,7 +10,7 @@ const Groups = () => {
   useEffect(() => {
     try {
       setIsLoading(true);
-      fetch("https://m10-assignment10-server.vercel.app/groups")
+      fetch("https://hobby-hub-server-ruby.vercel.app/groups")
         .then((res) => res.json())
         .then((data) => {
           const filterdGroups = data.filter((group) => today <= group.date);
