@@ -14,6 +14,8 @@ import LoadingSpinner from "../components/LoadingSpinner/LoadingSpinner";
 import About from "../pages/About/About";
 import Contact from "../pages/Contact/Contact";
 import BlogDetails from "../components/Blog/BlogDetails";
+import Dashboard from "../layouts/Dashboard";
+import DashboardPage from "../pages/Dashboard/DashboardPage";
 
 export const router = createBrowserRouter([
   {
@@ -54,14 +56,7 @@ export const router = createBrowserRouter([
           fetch("https://m10-assignment10-server.vercel.app/groups"),
         hydrateFallbackElement: <LoadingSpinner />,
       },
-      {
-        path: "createGroup",
-        element: (
-          <ProtectedRoute>
-            <CreateGroup />
-          </ProtectedRoute>
-        ),
-      },
+
       {
         path: "updateGroup/:id",
         element: (
@@ -88,13 +83,29 @@ export const router = createBrowserRouter([
           ),
         hydrateFallbackElement: <LoadingSpinner />,
       },
+    ],
+  },
+  {
+    path: "/dashboard",
+    element: (
+      <ProtectedRoute>
+        <Dashboard />
+      </ProtectedRoute>
+    ),
+    children: [
+      {
+        index: true,
+        Component: DashboardPage,
+        loader: () =>
+          fetch("https://m10-assignment10-server.vercel.app/groups"),
+      },
       {
         path: "myGroups",
-        element: (
-          <ProtectedRoute>
-            <MyGroups />
-          </ProtectedRoute>
-        ),
+        Component: MyGroups,
+      },
+      {
+        path: "createGroup",
+        Component: CreateGroup,
       },
     ],
   },

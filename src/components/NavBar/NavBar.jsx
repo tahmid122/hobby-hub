@@ -29,20 +29,6 @@ const NavBar = () => {
           All Groups
         </NavLink>
       </li>
-      {user?.email && (
-        <li>
-          <NavLink className={"rounded-none"} to={"/createGroup"}>
-            Create Group
-          </NavLink>
-        </li>
-      )}
-      {user?.email && (
-        <li>
-          <NavLink className={"rounded-none"} to={"/myGroups"}>
-            My Groups
-          </NavLink>
-        </li>
-      )}
       <li>
         <NavLink className={"rounded-none"} to={"/about"}>
           About Us
@@ -55,9 +41,9 @@ const NavBar = () => {
       </li>
     </>
   );
-
+  //myGroups, create groups
   return (
-    <div className="shadow-xs shadow-slate-400 dark:bg-slate-900 dark:text-white dark:border-b dark:border-b-slate-300 sticky top-0 left-0 bg-white z-50">
+    <div className="shadow-xs shadow-slate-400 dark:bg-slate-900 dark:text-white dark:border-b dark:border-b-slate-300 sticky top-0 left-0 bg-white z-20 lg:z-50">
       <div className="navbar md:w-11/12 mx-auto">
         <div className="navbar-start">
           <div className="dropdown">
@@ -126,9 +112,17 @@ const NavBar = () => {
               ""
             )}
             {user ? (
-              <button onClick={handleLogOut} className="btn btn-secondary">
-                Logout
-              </button>
+              <div className="flex items-center gap-2">
+                <Link
+                  to={"/dashboard"}
+                  className="btn btn-outline hover:bg-secondary hover:text-white transition-all duration-500"
+                >
+                  Dashboard
+                </Link>
+                <button onClick={handleLogOut} className="btn btn-secondary">
+                  Logout
+                </button>
+              </div>
             ) : (
               <div className="space-x-3 flex">
                 <Link to={"/login"} className="btn btn-secondary">
