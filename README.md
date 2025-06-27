@@ -8,9 +8,7 @@ HobbyHub is a platform where people can discover and join local hobby-based grou
 
 ## 🚀 Live Demo
 
-[Netlify Live Link](https://m10-assignment10-hobbyhub.netlify.app/)
-
-[Firebase Live Link](https://m10-assignment10-auth.web.app/)
+[Netlify Live Link](https://hobbyhub-bytahmid.netlify.app/)
 
 ---
 
