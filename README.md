@@ -1,4 +1,4 @@
-# 🎉 HobbyHub 🎉
+# <img src="https://i.ibb.co/B2yXL3vd/logo1.png" height="60px" width="60px"/> HobbyHub
 
 **HobbyHub** is a community-driven platform where users can discover, join, and create hobby-based local groups — such as book clubs, hiking crews, painting circles, and more. It fosters social engagement through shared interests and helps people build meaningful connections around their passions.
 
