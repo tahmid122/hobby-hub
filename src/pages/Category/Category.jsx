@@ -3,6 +3,7 @@ import { Link, useLoaderData, useParams } from "react-router";
 import LoadingSpinner from "../../components/LoadingSpinner/LoadingSpinner";
 import GroupCard from "../AllGroups/GroupCard";
 import { IoIosPeople } from "react-icons/io";
+import BackToPrev from "../../BackToPrev/BackToPrev";
 
 const Category = () => {
   const categories = useLoaderData();
@@ -13,7 +14,8 @@ const Category = () => {
     setCategory(filteredData);
   }, [categories, cat]);
   return (
-    <div className="w-11/12 mx-auto p-2 my-10 min-h-[80vh]">
+    <div className="w-11/12 mx-auto p-2 my-5 min-h-[80vh]">
+      <BackToPrev />
       {category?.length > 0 ? (
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           {category?.map((group) => (

@@ -56,7 +56,7 @@ const DashboardPage = () => {
           <Profile user={user} />
         </div>
         <div className="space-y-10">
-          <div className="rounded shadow-sm p-4 md:p-10 space-y-5 dark:text-white dark:shadow dark:shadow-slate-500">
+          <div className="rounded shadow-sm p-4 lg:p-10.5 space-y-5 dark:text-white dark:shadow dark:shadow-slate-500">
             <h3 className="text-3xl font-bold dark">
               Welcome {user.displayName} 🎉
             </h3>

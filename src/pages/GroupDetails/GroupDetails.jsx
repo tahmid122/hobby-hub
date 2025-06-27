@@ -6,6 +6,7 @@ import { MdCategory, MdEmail } from "react-icons/md";
 import { Link, useLoaderData } from "react-router";
 import { formatDateToYYYYMMDD } from "../../utils/FormatDate";
 import toast from "react-hot-toast";
+import BackToPrev from "../../BackToPrev/BackToPrev";
 
 const GroupDetails = () => {
   const [today, setToday] = useState("");
@@ -18,6 +19,9 @@ const GroupDetails = () => {
   }, []);
   return (
     <div className="w-11/12 mx-auto p-2">
+      <span className="mb-1 block">
+        <BackToPrev />
+      </span>
       <img
         className="w-full h-[250px] md:h-[400px] object-cover rounded bg-black"
         src={group?.imageUrl}

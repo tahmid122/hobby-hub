@@ -17,6 +17,7 @@ import BlogDetails from "../components/Blog/BlogDetails";
 import Dashboard from "../layouts/Dashboard";
 import DashboardPage from "../pages/Dashboard/DashboardPage";
 import Category from "../pages/Category/Category";
+import ResetPassword from "../pages/Login/ResetPassword";
 
 export const router = createBrowserRouter([
   {
@@ -40,6 +41,10 @@ export const router = createBrowserRouter([
       {
         path: "about",
         Component: About,
+      },
+      {
+        path: "resetPassword",
+        Component: ResetPassword,
       },
       {
         path: "contact",

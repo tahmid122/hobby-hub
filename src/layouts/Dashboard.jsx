@@ -33,10 +33,10 @@ const Dashboard = () => {
           <IoMdMoon size={20} />
         </button>
       </div>
-      <div className="min-h-screen relative flex gap-4 flex-col md:flex-row dark:bg-slate-900">
+      <div className="min-h-screen relative flex gap-4 flex-col lg:flex-row dark:bg-slate-900">
         <button
           onClick={() => setSidebarOpen(true)}
-          className="text-2xl mb-4 text-gray-700 dark:text-white md:hidden m-2"
+          className="text-2xl mb-4 text-gray-700 dark:text-white lg:hidden m-2"
         >
           <FiMenu />
         </button>

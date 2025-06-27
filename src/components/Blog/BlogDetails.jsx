@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Link, useLoaderData, useParams } from "react-router";
+import BackToPrev from "../../BackToPrev/BackToPrev";
 
 const BlogDetails = () => {
   const { id } = useParams();
@@ -23,7 +24,8 @@ const BlogDetails = () => {
   return (
     <>
       {blog && (
-        <div className="max-w-4xl mx-auto px-4 py-10">
+        <div className="max-w-4xl mx-auto px-4 my-5">
+          <BackToPrev />
           <img
             src={blog?.image}
             alt={blog?.title}

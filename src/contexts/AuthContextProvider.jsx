@@ -4,6 +4,7 @@ import {
   createUserWithEmailAndPassword,
   GoogleAuthProvider,
   onAuthStateChanged,
+  sendPasswordResetEmail,
   signInWithEmailAndPassword,
   signInWithPopup,
   signOut,
@@ -36,6 +37,9 @@ const AuthContextProvider = ({ children }) => {
       photoURL,
     });
   };
+  const passwordReset = (email) => {
+    return sendPasswordResetEmail(auth, email);
+  };
   const authDetails = {
     signInWithGoogle,
     user,
@@ -46,6 +50,7 @@ const AuthContextProvider = ({ children }) => {
     createUser,
     signInUser,
     updateUser,
+    passwordReset,
   };
 
   useEffect(() => {

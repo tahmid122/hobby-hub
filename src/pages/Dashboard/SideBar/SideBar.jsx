@@ -10,7 +10,7 @@ const Sidebar = ({ isOpen, onClose }) => {
       } md:translate-x-0 md:static md:block`}
     >
       {/* Close button (only on mobile) */}
-      <div className="md:hidden flex justify-end mb-4">
+      <div className="lg:hidden flex justify-end mb-4">
         <button onClick={onClose}>
           <FiX className="text-2xl" />
         </button>

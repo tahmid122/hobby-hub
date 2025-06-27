@@ -4,14 +4,16 @@ import { getFormData } from "../../utils/GetFormData";
 import Swal from "sweetalert2";
 import toast from "react-hot-toast";
 import { getImgURL } from "../../utils/getImgURL";
-
+import BackToPrev from "../../BackToPrev/BackToPrev";
 const UpdateGroup = () => {
   const groupDetails = useLoaderData();
   const navigate = useNavigate();
   const [imgPreview, setImgPreview] = useState(null);
+  const [isUploading, setIsUploading] = useState(false);
 
   const handleUpdate = async (e) => {
     e.preventDefault();
+    setIsUploading(true);
     const form = e.target;
     const data = getFormData(form);
     data.imageUrl = await getImgURL(data.imageUrl);
@@ -34,17 +36,18 @@ const UpdateGroup = () => {
         } else {
           toast.error("You haven't updated anything");
         }
+        setIsUploading(false);
       });
   };
   return (
     <div className="my-5 w-11/12 mx-auto min-h-[75vh] flex items-center justify-center">
       <div className="flex min-h-full flex-col justify-center px-6  lg:px-8 w-full lg:w-6/12 mx-auto py-10 rounded shadow-sm shadow-slate-400">
+        <BackToPrev />
         <div className="sm:mx-auto sm:w-full sm:max-w-sm">
           <h2 className="text-center text-2xl/9 font-bold tracking-tight text-gray-900 dark:text-white">
             Update your existing group
           </h2>
         </div>
-
         <div className="mt-10">
           <form onSubmit={handleUpdate} className="space-y-6">
             <div className="flex flex-col md:flex-row items-center justify-between gap-4">
@@ -210,7 +213,7 @@ const UpdateGroup = () => {
                   htmlFor="imageUrl"
                   className="block text-sm/6 font-medium text-gray-900 dark:text-white"
                 >
-                  Image URL
+                  Image
                 </label>
                 <div className="mt-2">
                   <input
@@ -236,7 +239,11 @@ const UpdateGroup = () => {
             </div>
             <div>
               <button type="submit" className="btn btn-secondary w-full">
-                Update
+                {isUploading ? (
+                  <span className="loading loading-spinner loading-md"></span>
+                ) : (
+                  "Update"
+                )}
               </button>
             </div>
           </form>

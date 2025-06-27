@@ -92,7 +92,7 @@ const MyGroups = () => {
               </table>
             </div>
           ) : (
-            <div className="space-y-2">
+            <div className="space-y-2 flex flex-col items-center justify-center min-h-[50vh]">
               <h3 className="text-xl font-semibold dark:text-white">
                 You haven't create any group yet
               </h3>

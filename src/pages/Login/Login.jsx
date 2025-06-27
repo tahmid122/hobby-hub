@@ -71,9 +71,12 @@ const Login = () => {
                   Password
                 </label>
                 <div className="text-sm">
-                  <a href="#" className="font-semibold text-orange-600">
+                  <Link
+                    to={"/resetPassword"}
+                    className="font-semibold text-orange-600"
+                  >
                     Forgot password?
-                  </a>
+                  </Link>
                 </div>
               </div>
               <div className="mt-2">

@@ -4,17 +4,18 @@ import { getFormData } from "../../utils/GetFormData";
 import Swal from "sweetalert2";
 import { useNavigate } from "react-router";
 import { getImgURL } from "../../utils/getImgURL";
+import BackToPrev from "../../BackToPrev/BackToPrev";
 
 const CreateGroup = () => {
   const { user } = use(AuthContext);
   const navigate = useNavigate();
   const [imgPreview, setImgPreview] = useState(null);
-
+  const [isUploading, setIsUploading] = useState(false);
   const handleSubmit = async (e) => {
     e.preventDefault();
+    setIsUploading(true);
     const data = getFormData(e.target);
     data.imageUrl = await getImgURL(data.imageUrl);
-    console.log(data);
     fetch("https://hobby-hub-server-ruby.vercel.app/groups", {
       method: "POST",
       headers: {
@@ -31,12 +32,14 @@ const CreateGroup = () => {
             icon: "success",
           });
         }
+        setIsUploading(false);
         navigate("/dashboard/myGroups");
       });
   };
   return (
     <div className="md:my-5 w-11/12 mx-auto min-h-[75vh] flex items-center justify-center mb-10 md:mb-5">
       <div className="flex min-h-full flex-col justify-center px-6  lg:px-8 w-full lg:w-6/12 mx-auto py-10 rounded shadow-sm shadow-slate-400">
+        <BackToPrev />
         <div className="sm:mx-auto sm:w-full sm:max-w-sm">
           <h2 className="text-center text-2xl/9 font-bold tracking-tight text-gray-900 dark:text-white">
             Create a new group
@@ -230,7 +233,11 @@ const CreateGroup = () => {
             </div>
             <div>
               <button type="submit" className="btn btn-secondary w-full">
-                Create
+                {isUploading ? (
+                  <span className="loading loading-spinner loading-md"></span>
+                ) : (
+                  "Create"
+                )}
               </button>
             </div>
           </form>

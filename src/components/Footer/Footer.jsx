@@ -13,7 +13,7 @@ const Footer = () => {
   return (
     <div className="bg-slate-800 w-full pt-10 pb-2 ">
       <div className="w-full md:w-11/12 mx-auto">
-        <footer className="footer sm:footer-horizontal  text-white p-5 md:p-2">
+        <footer className="footer lg:footer-horizontal  text-white p-5 md:p-2">
           <nav className="space-y-3">
             <Link to={"/"} className="flex items-center gap-2">
               <span className="text-5xl">
