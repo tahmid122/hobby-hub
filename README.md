@@ -88,8 +88,8 @@ Follow these steps to run the project on your local machine:
 1. **Clone the repository**
 
 ```bash
-git clone https://github.com/your-username/hobbyhub-client.git
-cd hobbyhub-client
+git clone https://github.com/tahmid122/hobby-hub.git
+cd hobby-hub
 ```
 
 2. **Install dependencies**
@@ -116,6 +116,7 @@ VITE_FIREBASE_PROJECT_ID=your_project_id
 VITE_FIREBASE_STORAGE_BUCKET=your_storage_bucket
 VITE_FIREBASE_MESSAGING_SENDER_ID=your_messaging_sender_id
 VITE_FIREBASE_APP_ID=your_app_id
+VITE_IMGBB_API=your+imgbb_api_key
 ```
 
 4. **Run the development server**
